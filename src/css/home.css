@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', system-ui;
 }
 :root {
   --darkColor: #15192a;
@@ -28,6 +28,32 @@ body {
   background: var(--warningColor);
 }
 
+/* @custom-selector :--nombreDelSelector .elemento > .hijo; */
+@custom-selector :--checkeable .checkbox-label, .radio-label;
+@custom-selector :--hightlight :hover, :active;
+
+.checkbox:checked + .primaryPlaylist-list {
+  display: none;
+}
+
+:--checkeable:--hightlight {
+  background: red;
+  color: white;
+}
+
+:--checkeable {
+  cursor: pointer;
+  user-select: none;
+  padding: 3px 7px;
+  border: 1px solid rgba(255, 0, 0, 0.1);
+  border-bottom: 3px solid red;
+  color: gray(42.37);
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
 /*home layout*/
 .home {
   background: var(--lightColor);
@@ -37,6 +63,7 @@ body {
   grid-template-rows: 1fr 150px;
   grid-template-areas: "sidebar primary"
                        "sidebar featuring";
+  /* background: green; */
 }
 
 .home-sidebar {
@@ -60,13 +87,19 @@ body {
   box-sizing: border-box;
   height: 100vh;
   overflow: auto;
+  /* background-color: rgba(0, 0, 0, 50%);  */
+  /* background: hwb(hue, whiteness, blackness) */
+  /* background: hwb(0 - 360, 0 - 100%, 0 - 100%, opacity) */
+  background: hwb(230, 8%, 82%, 1);
+  /* background: gray(0 - 255); */
+  /* background: gray(82.05); */
 }
 
 /* Logo*/
 .logo {
   width: calc(100% - 100px);
   margin: 0 auto;
-  background: blue;
+  /* background: blue; */
   /* background-image: image-set(url de la imagen densidad) */
   background-image: image-set(url('../../src/images/platzi-video.png') 1x, url('../../src/images/platzi-video-2x.png') 2x, url('../../src/images/platzi-video-3x.png') 300dpi);
   height: 40px;
@@ -89,6 +122,11 @@ body {
 
 .myPlaylist {
   padding: 0 20px;
+}
+
+.myPlaylist :any-link:hover {
+  color: rgba(205, 133, 63, 50%);
+  transform: scale(1.1);
 }
 
 .myPlaylist-item a {

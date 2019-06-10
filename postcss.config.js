@@ -11,6 +11,8 @@ module.exports = {
       },
       preserve: true // Valor por defecto de "true".Se asemeja a customProperties
       //cambiar a false para notar el cambio
-    })
+    }),
+    require('postcss-color-hwb'),
+    require('postcss-custom-selectors')
   ]
 }

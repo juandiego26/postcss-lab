@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
 }
 :root {
   --darkColor: #15192a;
@@ -29,6 +29,58 @@ body {
   background: var(--warningColor);
 }
 
+/* @custom-selector :--nombreDelSelector .elemento > .hijo; */
+
+.checkbox:checked + .primaryPlaylist-list {
+  display: none;
+}
+
+.checkbox-label:hover,.checkbox-label:active,.radio-label:hover,.radio-label:active {
+  background: red;
+  color: white;
+}
+
+.checkbox-label:hover,.checkbox-label:active,.radio-label:hover,.radio-label:active {
+  background: red;
+  color: white;
+}
+
+.checkbox-label,.radio-label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 3px 7px;
+  border: 1px solid rgba(255, 0, 0, 0.1);
+  border-bottom: 3px solid red;
+  color: rgb(100,100,100);
+  color: rgb(99,99,99);
+  color: gray(42.37);
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.checkbox-label,.radio-label {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 3px 7px;
+  border: 1px solid rgba(255, 0, 0, 0.1);
+  border-bottom: 3px solid red;
+  color: rgb(100,100,100);
+  color: rgb(99,99,99);
+  color: gray(42.37);
+  font-size: 12px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+
 /*home layout*/
 .home {
   background: white;
@@ -43,6 +95,7 @@ body {
   grid-template-rows: 1fr 150px;
       grid-template-areas: "sidebar primary"
                        "sidebar featuring";
+  /* background: green; */
 }
 
 .home-sidebar {
@@ -77,13 +130,19 @@ body {
   box-sizing: border-box;
   height: 100vh;
   overflow: auto;
+  /* background-color: rgba(0, 0, 0, 50%);  */
+  /* background: hwb(hue, whiteness, blackness) */
+  /* background: hwb(0 - 360, 0 - 100%, 0 - 100%, opacity) */
+  background: rgb(20, 25, 46);
+  /* background: gray(0 - 255); */
+  /* background: gray(82.05); */
 }
 
 /* Logo*/
 .logo {
   width: calc(100% - 100px);
   margin: 0 auto;
-  background: blue;
+  /* background: blue; */
   /* background-image: image-set(url de la imagen densidad) */
   background-image: url('../../src/images/platzi-video.png');
 }
