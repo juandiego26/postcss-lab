@@ -29,6 +29,7 @@ body {
 
 /*home layout*/
 .home {
+  /* autoprefixer: off */
   background: var(--lightColor);
   display: grid;
   height: 100vh;
@@ -62,9 +63,9 @@ body {
 }
 
 /*Logo*/
-.logo {
+/* .logo {
 
-}
+} */
 .logo-image {
   margin: 0;
 }
@@ -205,12 +206,12 @@ body {
   margin-right: 10px;
 }
 
-.primaryPlaylistItem {
-  /*border: 1px solid blue;*/
-}
+/* .primaryPlaylistItem {
+  border: 1px solid blue;
+} */
 
-.primaryPlaylistItem-image {
-}
+/* .primaryPlaylistItem-image {
+} */
 
 .primaryPlaylistItem img {
   width: 250px;
