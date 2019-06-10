@@ -15,6 +15,25 @@
 2. run `npx postcss src/css/home.css -o dist/css/home.css -w -u autoprefixer`
 3. create file `$touch postcss.config.js`
 
+## plugin postcss-preset-env
+1. install `$ npm i -D postcss-preset-env`
+2. use in file `postcss.config.js`
+
+```js
+module.exports = {
+  plugins: [
+    // require('autoprefixer')({
+    //   grid: true
+    // }),
+    require('postcss-preset-env')({
+      autoprefixer: {
+        grid: true,
+      }
+    })
+  ]
+}
+```
+
 ## Skills applied
 1. postCSS post processor
 

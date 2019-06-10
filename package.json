@@ -18,6 +18,7 @@
   "homepage": "https://github.com/juandiego26/postcss-lab#readme",
   "devDependencies": {
     "autoprefixer": "9.6.0",
-    "postcss-cli": "6.1.2"
+    "postcss-cli": "6.1.2",
+    "postcss-preset-env": "^6.6.0"
   }
 }
