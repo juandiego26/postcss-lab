@@ -94,9 +94,29 @@ body {
   -ms-grid-rows: 1fr 150px;
   grid-template-rows: 1fr 150px;
       grid-template-areas: "sidebar primary"
-                       "sidebar featuring";
+                       "sidebar featuring"
   /* background: green; */
 }
+@media (max-width: 767px) {
+.home {
+    height: auto;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto 150px;
+    grid-template-rows: auto auto 150px;
+        grid-template-areas: "primary" "sidebar" "featuring"
+}
+  }
+@media (--small) {
+.home {
+    height: auto;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto 150px;
+    grid-template-rows: auto auto 150px;
+        grid-template-areas: "primary" "sidebar" "featuring"
+}
+  }
 
 .home-sidebar {
   -ms-grid-row: 1;
@@ -113,6 +133,36 @@ body {
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: featuring;
+}
+@media (max-width: 767px) {
+.home-sidebar {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1
+}
+.home-primary {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1
+}
+.home-featuring {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1
+}
+}
+@media (--small) {
+.home-sidebar {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 1
+}
+.home-primary {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1
+}
+.home-featuring {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1
+}
 }
 
 /*Sidebar*/
@@ -181,20 +231,55 @@ body {
   padding: 0 20px;
 }
 
-.myPlaylist-item a {
-  color: white;
-  text-decoration: none;
-  font-size: .8em;
-  display: block;
-  margin-bottom: 7px;
-}
-.myPlaylist-item:last-child a {
-  margin-bottom: 0;
+.myPlaylist :link:hover,.myPlaylist :visited:hover {
+  color: rgba(205, 133, 63, 80%);
+  transform: scale(1.1);
 }
 
+.myPlaylist :-webkit-any-link:hover {
+  color: rgba(205, 133, 63, 80%);
+  transform: scale(1.1);
+}
+
+.myPlaylist :-moz-any-link:hover {
+  color: rgba(205, 133, 63, 80%);
+  transform: scale(1.1);
+}
+
+.myPlaylist :any-link:hover {
+  color: rgba(205, 133, 63, 80%);
+  transform: scale(1.1);
+}
+
+.myPlaylist-item a {
+    color: red;
+    text-decoration: none;
+    font-size: .8em;
+    display: block;
+    margin-bottom: 7px
+  }
 
 .myPlaylist-item a:hover {
-  text-decoration: underline;
+      text-decoration: underline;
+    }
+
+.myPlaylist-item:last-child a {
+    margin-bottom: 0;
+  }
+
+.myPlaylist .myPlaylist-item {
+    border: 5px dashed yellow
+}
+
+/* .myPlaylist .myPlaylist-item {
+} */
+
+.myPlaylist-item:last-child, .myPlaylist-item:nth-of-type(3), .myPlaylist-item:first-child{
+  background: rgba(255, 0, 0, 70%);
+}
+
+.myPlaylist-item:not(:last-child):not(:nth-of-type(3)){
+  background: rgba(0, 0, 255, 60%);
 }
 
 /*playlistFriends*/
@@ -341,8 +426,34 @@ body {
   height: 100%;
   align-items: center;
   padding-left: 100px;
-  color: white;
+  color: white
 }
+
+
+@media (max-width: 767px) {
+
+
+.featuring {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px
+}
+  }
+
+
+@media (--small) {
+
+
+.featuring {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px
+}
+  }
 
 .featuring-image {
   margin-right: 20px;
@@ -366,67 +477,11 @@ body {
   body {
     border: 10px solid blue;
   }
-  .home {
-    height: auto;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -ms-grid-rows: auto auto 150px;
-    grid-template-rows: auto auto 150px;
-        grid-template-areas: "primary" "sidebar" "featuring";
-  }
-  .featuring {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-  }
-  .home-sidebar {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-  }
-  .home-primary {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .home-featuring {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-  }
 }
 
 @media (--small) {
   body {
     border: 10px solid blue;
-  }
-  .home {
-    height: auto;
-    -ms-grid-columns: 1fr;
-    grid-template-columns: 1fr;
-    -ms-grid-rows: auto auto 150px;
-    grid-template-rows: auto auto 150px;
-        grid-template-areas: "primary" "sidebar" "featuring";
-  }
-  .featuring {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 150px;
-  }
-  .home-sidebar {
-    -ms-grid-row: 2;
-    -ms-grid-row-span: 1;
-    -ms-grid-column: 1;
-  }
-  .home-primary {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-  }
-  .home-featuring {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
   }
 }
 
