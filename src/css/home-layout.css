@@ -22,9 +22,10 @@
 .home-sidebar {
   grid-area: sidebar;
 }
+
 .home-primary {
-  grid-area: primary;
   display: grid;
+  grid-area: primary;
   grid-template-areas: "search user"
                        "list list";
   grid-template-rows: auto 1fr;
@@ -32,6 +33,7 @@
   padding: 10px;
   overflow: auto;
 }
+
 .home-featuring {
   grid-area: featuring;
 }

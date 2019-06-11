@@ -1,17 +1,16 @@
 /*myPlaylist*/
-
 .myPlaylist {
   padding: 0 20px;
 }
 
 .myPlaylist :any-link:hover {
-  color: color(peru l(80%) s(50%));
+  color: rgba(205, 133, 63, 80%);
   transform: scale(1.1);
 }
 
 .myPlaylist-item {
   & a {
-    color: white;
+    color: red;
     text-decoration: none;
     font-size: .8em;
     display: block;
@@ -24,17 +23,17 @@
     margin-bottom: 0;
   }
   @nest .myPlaylist & {
-    border: 5px dashed pink;
+    border: 5px dashed yellow;
   }
 }
 
-/*.myPlaylist .myPlaylist-item {
-}
-*/
+/* .myPlaylist .myPlaylist-item {
+} */
 
-.myPlaylist-item:matches(:last-child, :nth-of-type(3), :first-child) {
-  background: color(red l(70%));
+.myPlaylist-item:matches(:last-child, :nth-of-type(3), :first-child){
+  background: rgba(255, 0, 0, 70%);
 }
-.myPlaylist-item:not(:last-child, :nth-of-type(3)) {
-  background: color(blue l(80%));
+
+.myPlaylist-item:not(:last-child, :nth-of-type(3)){
+  background: rgba(0, 0, 255, 60%);
 }

@@ -2,20 +2,20 @@
   display: none;
 }
 
+:--checkeable:--hightlight {
+  background: red;
+  color: white;
+}
+
 :--checkeable {
   cursor: pointer;
   user-select: none;
   padding: 3px 7px;
-  border: 1px solid color(red b(10%));
+  border: 1px solid rgba(255, 0, 0, 0.1);
   border-bottom: 3px solid red;
-  color: gray(100);
+  color: gray(42.37);
   font-size: 12px;
   border-radius: 5px;
   margin-bottom: 10px;
   display: inline-block;
-}
-
-:--checkeable:--hightlight {
-  background: red;
-  color: white;
 }
