@@ -3,7 +3,19 @@ module.exports = {
     // require('autoprefixer')({
     //   grid: true
     // }),
-    require('postcss-import'),
+    require('postcss-import')({
+      plugins: [
+        require('stylelint')
+      ]
+    }),
+    require('postcss-font-magician')({
+      variants: {
+        'Lato': {
+          '300': [],
+          '400': [],
+        }
+      }
+    }),
     require('postcss-apply'),
     require('postcss-custom-selectors'),
     require('postcss-preset-env')({

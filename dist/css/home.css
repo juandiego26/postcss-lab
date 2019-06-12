@@ -1,3 +1,15 @@
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  src: local("Lato Light"),local(Lato-Light),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPHQ.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPGQ.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6u9w4BMUTPHh7USSwiPHw.woff) format("woff");
+}
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Lato Regular"),local(Lato-Regular),url(//fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWg.eot?#) format("eot"),url(//fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wXg.woff2) format("woff2"),url(//fonts.gstatic.com/s/lato/v14/S6uyw4BMUTPHjx4wWA.woff) format("woff");
+}
 body {
   margin: 10px;
   font-family: 'Lato', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
