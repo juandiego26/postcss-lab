@@ -18,6 +18,8 @@
   "homepage": "https://github.com/juandiego26/postcss-lab#readme",
   "devDependencies": {
     "autoprefixer": "9.6.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
     "postcss-apply": "0.12.0",
     "postcss-cli": "6.1.2",
     "postcss-color-hwb": "3.0.0",
